@@ -40,18 +40,33 @@ A full subtractor is a combinational circuit that performs subtraction involving
 3.	Generate the RTL schematic and save the logic diagram.
 4.	Create nodes for inputs and outputs to generate the timing diagram.
 5.	For different input combinations, generate the timing diagram.
-
-
 ## Program:
-
-
+~~~
+Developed by: M.vivek reddy
+Reg no: 212221240030
+~~~
+## Half Subtractor
+```
+module half_sub(output B,D, input x,y);
+assign D=x^y;
+assign B=~x&y;
+endmodule
+```
 ## RTL Schematic:
-
-
-
-
+![image](https://github.com/Vivekreddy8360/Subtractor/assets/94525701/bb61e604-5292-4bb9-95ad-3ad7f5bf5833)
 ## Timing Diagram:
-
+![image](https://github.com/Vivekreddy8360/Subtractor/assets/94525701/c717c2d7-9c83-46ba-86ab-0ff7065265d0)
+## Full Subtractor
+```
+module full_sub(output B,D, input x,y,z);
+assign D=x^y^z;
+assign B=(~x&(y^z))|(y&z);
+endmodule
+```
+## RTL Schematic:
+![image](https://github.com/Vivekreddy8360/Subtractor/assets/94525701/96139572-97cc-48f7-8d89-553eac9db04a)
+## Timing Diagram:
+![image](https://github.com/Vivekreddy8360/Subtractor/assets/94525701/d7684a50-caa2-4c7d-b100-5771b1c3066c)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables are verified using Verilog HDL.
